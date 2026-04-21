@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hungry Club</title>
+    <meta name="theme-color" content="#ff6900">
+    <meta name="description" content="We know that for a great restaurant, being discovered is everything. Hungry Club goes beyond basic bookings by putting your unique atmosphere in front of diners through our curated search engine. Once they find you, we keep them coming back with automated confirmations and guest self-service, turning hungry browsers into your most loyal regulars.">
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+    <div class="bg-white dark:bg-gray-900">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Hungry Club</span>
+              <!-- <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=orange&shade=600" alt="" class="h-8 w-auto dark:hidden" />
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=orange&shade=500" alt="" class="h-8 w-auto not-dark:hidden" /> -->
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200">
+              <span class="sr-only">Open main menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Product</a> -->
+            <a href="#features" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Features</a>
+            <a href="#join" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Join</a>
+            <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">About Us</a> -->
+            <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Company</a> -->
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a> -->
+          </div>
+        </nav>
+        <el-dialog>
+          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+              <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10">
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Hungry Club</span>
+                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=orange&shade=600" alt="" class="h-8 w-auto dark:hidden" />
+                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=orange&shade=500" alt="" class="h-8 w-auto not-dark:hidden" />
+                  </a>
+                  <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200">
+                    <span class="sr-only">Close menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                      <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
+                    <div class="space-y-2 py-6">
+                      <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Product</a> -->
+                      <a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Features</a>
+                      <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Marketplace</a> -->
+                      <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Company</a> -->
+                      <a href="#join" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Join</a>
+                    </div>
+                    <!-- <div class="py-6">
+                      <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">Log in</a>
+                    </div> -->
+                  </div>
+                </div>
+              </el-dialog-panel>
+            </div>
+          </dialog>
+        </el-dialog>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <img src="/hero.jpg" alt="" class="absolute inset-0 -z-10 size-full opacity-15 object-cover not-dark:hidden" />
+        <div class="absolute inset-0 -z-10 size-full object-cover dark:hidden" style="background: #fef6e5;"></div>
+        <img src="/hero.jpg" alt="" class="absolute inset-0 -z-10 size-full opacity-10 object-cover dark:hidden" />
+        
+        <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ffd6a8] to-[#ffa2a2] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+        </div>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
+              Join the waitlist for early access to Hungry Club.
+            </div>
+          </div>
+          <div class="text-center">
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl dark:text-white">Satisfy the hungry. Simplify the systems.</h1>
+            <p class="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 dark:text-gray-400">We know that for a great restaurant, being discovered is everything. Hungry Club goes beyond basic bookings by putting your unique atmosphere in front of diners through our curated search engine. Once they find you, we keep them coming back with automated confirmations and guest self-service, turning hungry browsers into your most loyal regulars.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#" class="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400 dark:focus-visible:outline-orange-500">Get started</a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+        <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+          <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ffd6a8] to-[#ffa2a2] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of hero section -->
+
+    <!-- beginning of features -->
+     <div class="bg-white py-24 sm:py-32 dark:bg-gray-900" id="features">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:text-center">
+          <h2 class="text-base/7 font-semibold text-orange-600 dark:text-orange-400">FEATURES</h2>
+          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance dark:text-white">Everything you need to fill your floor and streamline your service.</p>
+          <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">Hungry Club gives you the tools to manage your dining room with ease, from the first click to the final check.</p>
+        </div>
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525" />
+                </svg>
+                Multichannel Booking
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Integrate your booking engine directly into your website, Facebook, and Instagram. Your guests can book a table straight from Google Search or Maps.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                </svg>
+                Instant Confirmation
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Boost guest confidence and reduce no-shows with automated email confirmations. The moment a booking is confirmed, your guest receives their booking details.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                Guest Self-Service
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Allows diners to modify or cancel their reservations online without ever picking up the phone. It's better for them, and even better for your front-of-house staff.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                24/7 and Last Minute Bookings
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Our platform stays awake to capture 24/7 and last-minute reservations, ensuring your tables stay full without your team ever having to pick up the phone.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                Opening Hours, Gallery and Menu
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Showcase your signature dishes and restaurant ambience in high-resolution pictures. Give guests everything they need to plan their visit at a glance, from real-time opening hours and location details to your latest seasonal offerings.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+                Work Across Any Devices
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Whether you're at the host stand with a tablet or checking numbers on your laptop at home, our responsive interface keeps your bookings synced and accessible across phone, tablet, and desktop.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
+                </svg>
+                Hassle-free Setup and Migration
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Switching systems shouldn't be a headache. Our dedicated team manages your data migration and initial setup from start to finish. No chatbot or missing emails, you talk directly with a human on the phone.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-orange-600 dark:text-orange-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                Discovery
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">Don't just wait for walk-ins. Advanced search and filtering system puts your restaurant in front of diners who are actively looking for your specific cuisine and price range.</p>
+                <p class="mt-6">
+                  <a href="#" class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              </dd>
+            </div>
+
+
+          </dl>
+        </div>
+      </div>
+    </div>
+    <!-- end of features section -->
+
+    <div class="relative isolate bg-white dark:bg-gray-900" id="join">
+      <div aria-hidden="true" class="absolute inset-x-0 bottom-[calc(10%)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ffd6a8] to-[#ffa2a2] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+      </div>
+      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <div class="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
+          <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">Deals for Early (and hungry) Birds</h2>
+            <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">Hungry Club is looking for a handful of forward-thinking restaurants to join our early access program. To celebrate our launch, we've reserved exclusive free seats for early birds. Sign up now to skip the waitlist and start filling your tables for free.</p>
+            <dl class="mt-10 space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
+              <!-- <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Address</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="h-7 w-6 text-gray-400">
+                    <path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </dt>
+                <dd>FINLAND HERE</dd>
+              </div> -->
+              <!-- <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Telephone</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="h-7 w-6 text-gray-400">
+                    <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </dt>
+                <dd><a href="tel:+358449608891" class="hover:text-gray-900 dark:hover:text-white">+358 44 9608891</a></dd>
+              </div> -->
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Email</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="h-7 w-6 text-gray-400">
+                    <path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </dt>
+                <dd><a href="mailto:hello@hungryclub.fi" class="hover:text-gray-900 dark:hover:text-white">hello@hungryclub.fi</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <form action="#" method="POST" class="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48">
+          <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+
+              <div class="sm:col-span-2">
+                <label for="restaurant-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Restaurant name</label>
+                <div class="mt-2.5">
+                  <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div>
+                <label for="city" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">City</label>
+                <div class="mt-2.5">
+                  <input id="city" type="text" name="city" autocomplete="address-level2" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div>
+                <label for="postal-code" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Postal Code</label>
+                <div class="mt-2.5">
+                  <input id="postal-code" type="text" name="postal-code" autocomplete="postal-code" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div>
+                <label for="first-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">First name</label>
+                <div class="mt-2.5">
+                  <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Last name</label>
+                <div class="mt-2.5">
+                  <input id="last-name" type="text" name="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="email" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Email</label>
+                <div class="mt-2.5">
+                  <input id="email" type="email" name="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900 dark:text-white">Phone number</label>
+                <div class="mt-2.5">
+                  <input id="phone-number" type="tel" name="phone-number" autocomplete="tel" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500" />
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 flex justify-end">
+              <button type="submit" class="rounded-md bg-orange-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400 dark:focus-visible:outline-orange-500">I'm interested</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
